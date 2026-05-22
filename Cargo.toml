@@ -1,0 +1,27 @@
+[package]
+name = "lcov_filter"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+description = "Small LCOV post-processor for marker-based coverage exclusions"
+readme = "README.md"
+repository = "https://github.com/cLazyZombie/lcov_filter"
+homepage = "https://github.com/cLazyZombie/lcov_filter"
+keywords = ["lcov", "coverage", "llvm-cov", "cli"]
+categories = ["command-line-utilities", "development-tools::testing"]
+include = ["src/**", "tests/**", "Cargo.toml", "README.md", "LICENSE", "SECURITY.md"]
+
+[[bin]]
+name = "lcov_filter"
+path = "src/main.rs"
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+unwrap_used = "deny"
+expect_used = "deny"
+panic = "deny"
+dbg_macro = "deny"
+todo = "deny"
+unimplemented = "deny"
